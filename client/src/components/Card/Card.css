@@ -1,0 +1,12 @@
+.card {
+
+    margin-bottom: 30px;
+    border-radius: 6px;
+}
+
+.card-header {
+
+    background-color: #20315A;
+    color: white;
+}
+
