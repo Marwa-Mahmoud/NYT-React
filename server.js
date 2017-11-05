@@ -10,6 +10,10 @@ const app = express();
 // Configure body parser for AJAX requests
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+// Serve up static assets
+app.use(express.static("client/build"));
+
+app.use(routes);
 
 mongoose.Promise = global.Promise;
 ///Data base connection
@@ -27,7 +31,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-app.use(routes);
+
 
 
 
